@@ -1,0 +1,17 @@
+services:
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx.Dockerfile
+    ports:
+      - 1935:1935
+      - 80:80
+      - 443:443
+    volumes:
+      - ./etc/openssl:/etc/ssl
+      - ./hls:/etc/hls
+    environment:
+      - TWITCH_KEY=${TWITCH_KEY}
+      - YOUTUBE_KEY=${YOUTUBE_KEY}
+    restart: always
