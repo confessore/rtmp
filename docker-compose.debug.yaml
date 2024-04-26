@@ -12,6 +12,7 @@ services:
       - ./etc/openssl:/etc/ssl
       - ./hls:/etc/hls
     environment:
+      - PUBLIC_IP=${PUBLIC_IP}
       - TWITCH_KEY=${TWITCH_KEY}
       - YOUTUBE_KEY=${YOUTUBE_KEY}
     restart: always
