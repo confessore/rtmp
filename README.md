@@ -37,15 +37,16 @@ sudo usermod -aG docker $USER
 8. Copy `.env.example` to `.env.local`
 9. Fill in the environment variables
     - The IP Address is the IP Address from where you want to stream
-
+10. Start the server
 
 ```
 docker compose --env-file .env.local up -d --build
 
 ```
+11. Stream to `rtmp://<your-ip-or-domain>:1935/live/obs_stream`
 
 
-if you're on fiber, you can probably get away with just streaming from localhost no big deal
+if you're on fiber, you can probably get away with just streaming to localhost no big deal
 ```
 docker compose -f docker-compose.debug.yaml --env-file .env.local up -d --build
 
