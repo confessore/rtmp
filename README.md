@@ -2,11 +2,11 @@
 
 # Deploy to AWS
 
-Create an EC2 - I launch a t4g.nano using Ubuntu which is arm64
-Allocate an Elastic IP Address
-Associate the Elastic IP Address with the EC2
-SSH into the EC2
-Install Docker
+1. Create an EC2 - I launch a t4g.nano using Ubuntu which is arm64
+2. Allocate an Elastic IP Address
+3. Associate the Elastic IP Address with the EC2
+4. SSH into the EC2
+5. Install Docker
 ```
 # Add Docker's official GPG key:
 sudo apt-get update
@@ -31,11 +31,11 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo usermod -aG docker $USER
 ```
 
-Exit the EC2 and then SSH back into it
+6. Exit the EC2 and then SSH back into it
 
-Copy `.env.example` to `.env.local`
-Fill in the environment variables
-The IP Address is the IP Address from where you want to stream
+7. Copy `.env.example` to `.env.local`
+8. Fill in the environment variables
+    - The IP Address is the IP Address from where you want to stream
 
 
 ```
